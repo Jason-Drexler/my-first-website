@@ -29,7 +29,7 @@ h1,
 h2,
 h3 {
   color: var(--color-headings);
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   line-height: 1.1;
 }
 h1 {
@@ -698,3 +698,34 @@ secondary color button
     transform: scale(1.1);
   }
 }
+
+/* - - - - features - - - - */
+
+.features .media {
+  flex-direction: column;
+}
+.features {
+  align-items: center;
+  gap: 4rem 3rem;
+}
+.features .media__image {
+  margin-left: 2rem;
+}
+.features__image {
+  width: 100%;
+}
+.features .media__title {
+  margin-top: 1rem;
+}
+.features {
+  padding: 4rem;
+}
+.features:first-of-type {
+  padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .features:nth-of-type(even) .features__content {
+    order: 2;
+  }
+}
+/* TODO: ayo look at that. the 'wordpress' image needs to be converted to webp and added to the features section */
