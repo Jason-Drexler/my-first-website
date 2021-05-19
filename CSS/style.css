@@ -288,8 +288,9 @@ secondary color button
 
 .card {
   border-radius: 7px;
-  box-shadow: 0 0 20px 10px var(--color-border);
+  box-shadow: 0 0 15px 7px var(--color-border);
   overflow: hidden;
+  transition: all 0.3s;
 }
 
 .card__header,
@@ -307,6 +308,9 @@ secondary color button
 }
 .card--secondary .badge--secondary {
   background: #02cdf1;
+}
+.card--primary .badge--primary {
+  background: #126de4;
 }
 
 /* - - - - PLANS - - - - */
@@ -346,6 +350,7 @@ secondary color button
   top: -6px;
   right: 5%; /*we add an image to the header with the ::before selector. we made the header position:relative; so we can then set the before image to pos:relative; to then place it where we wanted within the card. */
 }
+
 @media screen and (min-width: 1024px) {
   .plan__price {
     font-size: 5rem;
@@ -420,6 +425,7 @@ secondary color button
 
 .grid {
   display: grid;
+  justify-items: center;
 }
 @media screen and (min-width: 768px) {
   .grid--1x2 {
@@ -669,5 +675,26 @@ secondary color button
 @media screen and (min-width: 768px) {
   .domain-block__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+/* - - - - PLANS BLOCK - - - - */
+.block-plans {
+  margin: 0 auto;
+}
+.block-plans .grid {
+  max-width: 1140px;
+  gap: 7rem 5.5rem;
+  margin: 8% 8%;
+}
+.block-plans .grid .card:hover {
+  transform: scale(1.13);
+}
+.block-plans .card {
+  max-width: 500px;
+}
+@media screen and (min-width: 1024px) {
+  .plan--popular {
+    transform: scale(1.1);
   }
 }
