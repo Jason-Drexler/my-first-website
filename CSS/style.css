@@ -203,7 +203,7 @@ secondary color button
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -253,6 +253,7 @@ secondary color button
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
+    padding: 1.5rem 3rem;
   }
 }
 
@@ -278,6 +279,7 @@ secondary color button
   border: 0;
   flex-grow: 1; /*stretches to fit the container, akin to 1fr in a grid */
   padding: 1.5rem 3rem;
+  width: 0;
 }
 .input-group .btn {
   margin: 4px;
@@ -431,6 +433,7 @@ secondary color button
 .grid {
   display: grid;
   justify-items: center;
+  grid-template-columns: minmax(200px, 1fr);
 }
 @media screen and (min-width: 768px) {
   .grid--1x2 {
@@ -510,6 +513,12 @@ secondary color button
     margin: 0 2rem;
   }
 }
+@media screen and (min-width: 1139px) {
+  .callout {
+    position: relative;
+    top: 40px;
+  }
+}
 
 /* - - - - COLLAPSIBLES - - - - */
 
@@ -577,7 +586,7 @@ secondary color button
 
 .container {
   max-width: 1140px;
-  min-width: 320px;
+  min-width: 280px;
   margin: 0 auto;
 }
 
@@ -672,18 +681,25 @@ secondary color button
 
 .domain-block__prices {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat (2, 6rem);
   font-size: 2rem;
   font-weight: 600;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
   justify-items: center;
-  max-width: 750px;
   margin: 0 auto;
+  max-width: 750px;
+  color: var(--color-primary);
+  text-shadow: 1px 0 2px rgb(52, 85, 85, 0.5);
 }
 
 @media screen and (min-width: 768px) {
   .domain-block__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+@media screen and (max-width: 400px) {
+  .domain-block__prices {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -694,7 +710,7 @@ secondary color button
 .block-plans .grid {
   max-width: 1140px;
   gap: 7rem 5.5rem;
-  margin: 8% 8%;
+  margin: auto auto;
 }
 .block-plans .grid .card:hover {
   transform: scale(1.13);
@@ -705,6 +721,11 @@ secondary color button
 @media screen and (min-width: 1024px) {
   .plan--popular {
     transform: scale(1.1);
+  }
+}
+@media screen and (max-width: 1023px) {
+  .block-plans {
+    padding-top: 0;
   }
 }
 
