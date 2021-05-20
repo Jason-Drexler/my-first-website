@@ -14,8 +14,11 @@
   box-sizing: border-box;
 }
 
-/* TYPOGRAPHY */
-
+/* - - - - TYPOGRAPHY - - - - */
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
 html {
   font-size: 62.5%;
 }
@@ -31,6 +34,7 @@ h3 {
   color: var(--color-headings);
   margin: 1rem 0;
   line-height: 1.1;
+  font-weight: 500;
 }
 h1 {
   font-size: 7rem;
@@ -121,7 +125,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0; /*list-style: none; along with padding-left: 0; removes the bullets and then pushes the content (li's) to the left. this is necessary when using an unordered list as a navbar */
-  color: var(--color-headings);
 }
 .list--inline .list__item {
   display: inline-block;
@@ -131,6 +134,7 @@ a {
 .list--tick {
   list-style-image: url(../Images/tick.svg); /*you can set any image as a list tick. this is so cool! */
   padding-left: 3rem; /* and then, it might not need saying, but we need the padding back once we add our list-style */
+  color: var(--color-headings);
 }
 .list--tick .list__item {
   padding-left: 0.5rem;
@@ -367,6 +371,7 @@ secondary color button
 
 .media {
   display: flex;
+  margin-bottom: 4rem;
 }
 .media__title {
   margin-top: 0;
@@ -551,16 +556,21 @@ secondary color button
   background: black;
   color: #7b858e;
 }
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
+  color: white;
+}
 .block--dark .block__heading {
   color: white;
 }
 .block--skewed-right {
-  clip-path: polygon(100% 100%, 0 80%, 0 0, 100% 0);
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(100% 100%, 0 90%, 0 0, 100% 0);
+  padding-bottom: calc(var(--padding-vertical) + 5rem);
 }
 .block--skewed-left {
-  clip-path: polygon(0% 100%, 0 0, 100% 0, 100% 80%);
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 100%, 0 0, 100% 0, 100% 90%);
+  padding-bottom: calc(var(--padding-vertical) + 5rem);
 }
 
 .container {
@@ -636,10 +646,6 @@ secondary color button
 }
 .hero__image {
   width: 100%;
-}
-
-.hero {
-  clip-path: polygon(0% 100%, 0 0, 100% 0, 100% 90%);
 }
 
 @media screen and (min-width: 768px) {
@@ -726,5 +732,32 @@ secondary color button
 @media screen and (min-width: 768px) {
   .features:nth-of-type(even) .features__content {
     order: 2;
+  }
+}
+
+/* - - - - SHOWCASE - - - - */
+.block--showcase__header {
+  margin-bottom: 2rem;
+}
+.block--showcase__content {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 2rem;
+  justify-content: center;
+}
+.block--showcase__image > img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .block--showcase .container.grid.grid--1x2 {
+    grid-template-columns: 50% 50%;
+  }
+  .block--showcase__image {
+    justify-self: end;
+  }
+  .block--showcase__image > img {
+    width: auto;
+    max-width: 675px;
   }
 }
