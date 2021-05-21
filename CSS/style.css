@@ -473,7 +473,7 @@ secondary color button
 }
 @media screen and (max-width: 767px) {
   .testimonial__image > .icon-container {
-    right: none; /* resets the right positioning to none. this allows for the left positioning to then position on phones (or just smaller than tablets) so that the icon is to the right of the image rather than the left */
+    right: 0; /* resets the right positioning to none. this allows for the left positioning to then position on phones (or just smaller than tablets) so that the icon is to the right of the image rather than the left */
     left: 10%;
   }
 }
