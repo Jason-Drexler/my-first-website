@@ -16,3 +16,8 @@ macosxRenamed/
 # echo "Code Along" >> .gitignore
 # echo "__MACOSX" >> .gitignore
 
+# git filter-branch --index-filter 'git rm --cached --ignore-unmatch -r Code Along' HEAD
+# git for-each-ref --format="%(refname)" refs/original/ | while read ref; do git update-ref -d $ref; done
+# git reflog expire --expire=now --all
+# git gc --prune=now
+# git rev-list --objects --all -- Moshified
