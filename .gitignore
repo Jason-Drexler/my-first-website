@@ -1,12 +1,18 @@
 node_modules/
 .cache
 dist
-Moshify
-Code Along
-__MACOSX
+Moshified/
+Code Along/
+Code_Along/
+Code-Along/
+CodeAlong/
+__MACOSX/
+macosxRenamed/
 # $ echo "Code Along" >> .gitignore
 # git rm --cached Moshify
 # git rm --cached Code Along
-# git rm --cached __MACOSXMoshify
-Code Along
-__MACOSX
+# git rm --cached __MACOSX
+# echo "Moshify" >> .gitignore
+# echo "Code Along" >> .gitignore
+# echo "__MACOSX" >> .gitignore
+
