@@ -7,4 +7,6 @@ __MACOSX
 # $ echo "Code Along" >> .gitignore
 # git rm --cached Moshify
 # git rm --cached Code Along
-# git rm --cached __MACOSX
+# git rm --cached __MACOSXMoshify
+Code Along
+__MACOSX
