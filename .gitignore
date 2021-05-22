@@ -1,6 +1,6 @@
 node_modules/
-.cache
-dist
+.cache/
+dist/
 Moshified/
 Code Along/
 Code_Along/
